@@ -15,7 +15,7 @@ pipeline {
         }
         stage('S3 Upload') {
             steps {
-                withAWS(region: 'us-east-1', credentials: '90516043-3031-4352-89ae-cba8fc8194b9') {
+                withAWS(region: 'us-east-1', credentials: 'AKIAXKMJYYON6XWO2PJW') {
                     sh 'ls -la build'
                     sh 'aws s3 cp build s3://jenkins-react-pipeline/ --recursive'
                 }
